@@ -93,7 +93,6 @@ async def edit(ctx):
 # Lancer le keep_alive
 keep_alive.keep_alive()
 
-# Ton token ici
 import os
-bot.run(os.getenv("MTM2MzQ2NjIyNTI5NTgyMjk2OQ.G94oSk.me82QfL4wS2k5bbQWRkjxflkfoQ0zSdi1-ipbo"))
+bot.run(os.getenv("DISCORD_TOKEN"))
 
