@@ -94,4 +94,4 @@ async def edit(ctx):
 keep_alive.keep_alive()
 
 # Ton token ici
-bot.run("MTM2MzQ2NjIyNTI5NTgyMjk2OQ.GrFBqv.Om73FwLAXwe3tOoFEUl_1EVeONfwZYHMoxdc5Y")
+bot.run("MTM2MzQ2NjIyNTI5NTgyMjk2OQ.GZDrSd.zObe3iggswivGCy_IKw_SBQLO7XbLPODKG0Ahg")
