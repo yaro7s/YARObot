@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import os
-import keep_alive  # Ce fichier permet de garder le bot actif
+import keep_alive  
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -91,9 +91,9 @@ async def edit(ctx):
     except Exception as e:
         await ctx.send(f"❌ Erreur : {e}")
 
-# Lancer le serveur Flask pour garder le bot actif
+
 keep_alive.keep_alive()
 
-# Utiliser la variable d'environnement pour récupérer ton token
+
 bot.run(os.getenv("DISCORD_TOKEN"))
 
