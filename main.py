@@ -3,13 +3,13 @@ from discord.ext import commands
 import os
 import keep_alive  
 
-# Initialisation du bot
+
 intents = discord.Intents.default()
 intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Créer un embed de bienvenue pour un nouveau membre
+
 def create_welcome_embed(member):
     return discord.Embed(
         title=f"🎉 Bienvenue {member.name} !",
@@ -21,19 +21,19 @@ def create_welcome_embed(member):
         text="YARObot • Serveur by YARO 🧠"
     )
 
-# Quand le bot est prêt
+
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} est maintenant en ligne ! 🎉")
 
-# Quand un membre rejoint, on envoie un message de bienvenue
+
 @bot.event
 async def on_member_join(member):
     channel = discord.utils.get(member.guild.text_channels, name="🛬-welcome")
     if channel:
         await channel.send(embed=create_welcome_embed(member))
 
-# Commande pour créer un embed personnalisé
+
 @bot.command()
 async def setupYaro(ctx):
     await ctx.send("📌 D'abord, envoie-moi le **titre** de ton embed :")
@@ -51,7 +51,7 @@ async def setupYaro(ctx):
     except Exception as e:
         await ctx.send(f"❌ Oups, il y a eu une erreur : {e}")
 
-# Commande pour modifier un embed existant
+
 @bot.command()
 async def edit(ctx):
     await ctx.send("📩 Envoie-moi l'ID du message à modifier (fais un clic droit et copie l’identifiant).")
@@ -82,10 +82,10 @@ async def edit(ctx):
     except Exception as e:
         await ctx.send(f"❌ Oups, une erreur est survenue : {e}")
 
-# Lancement du keep-alive pour garder le bot actif
+
 keep_alive.keep_alive()
 
-# Lancement du bot avec le token depuis les variables d'environnement
+
 bot.run(os.getenv("DISCORD_TOKEN"))
 
 
