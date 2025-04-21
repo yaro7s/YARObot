@@ -95,5 +95,5 @@ keep_alive.keep_alive()
 
 # Ton token ici
 import os
-bot.run(os.getenv("MTM2MzQ2NjIyNTI5NTgyMjk2OQ.GvQ_kg.LcoR4EKesoCa3e2cluLFdlO4y0kf42NKVOnHnE"))
+bot.run(os.getenv("MTM2MzQ2NjIyNTI5NTgyMjk2OQ.G94oSk.me82QfL4wS2k5bbQWRkjxflkfoQ0zSdi1-ipbo"))
 
