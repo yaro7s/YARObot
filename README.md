@@ -1,2 +1,2 @@
 # YARObot
-Bot Discord avec système de bienvenue et embed personnalisés
+croivez pas y'a rien a lire
