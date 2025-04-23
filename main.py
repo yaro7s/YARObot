@@ -12,13 +12,13 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 def create_welcome_embed(member):
     return discord.Embed(
-        title=f"🎉 Bienvenue {member.name} !",
-        description="On est super content de t'avoir avec nous ! Si tu as des questions, n'hésite pas.",
+        title=f"🎉 Welcome {member.name} !",
+        description="We're so happy to have you with us! If you have any questions, don't hesitate to ask.",
         color=discord.Color.blue()
     ).set_thumbnail(
         url=member.avatar.url if member.avatar else member.default_avatar.url
     ).set_footer(
-        text="YARObot • Serveur by YARO 🧠"
+        text="YARObot • Server by YARO 🧠"
     )
 
 
